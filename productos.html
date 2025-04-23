@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>Productos - Barbería Alura </title>
+        <link rel="stylesheet" href="reset.css">
+        <link rel="stylesheet" href="style.css">        
+        <link rel="stylesheet" href="style-home.css">
+        <link rel="stylesheet" href="contacto.css">
+    </head>
+    <body>
+        <!--AQUI ESTOY AGREGANDO EL CHATBOT A MI PAGINA-->
+		<link href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css" rel="stylesheet" />
+		<script type="module">
+			import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
+
+			createChat({
+				webhookUrl: 'https://federicotaxpy.app.n8n.cloud/webhook/6e3172b8-3a6b-4efc-8451-7573f9a7b4be/chat',
+				webhookConfig: {
+					method: 'POST',
+					headers: {}
+				},
+				target: '#n8n-chat',
+				mode: 'window',
+				chatInputKey: 'chatInput',
+				chatSessionKey: 'sessionId',
+				metadata: {},
+				showWelcomeScreen: false,
+				defaultLanguage: 'es',
+				initialMessages: [
+					'Hola! 👋',
+					'Mi nombre es Nathan. ¿Cómo puedo ayudarle hoy?'
+				],
+				i18n: {
+					es: {
+						title: 'Hola soy Taxpy! 👋',
+						subtitle: "Bienvenido. Estamos aquí para ayudarte 24/7.",
+						footer: '',
+						getStarted: 'New Conversation',
+						inputPlaceholder: 'Mensaje...',
+					},
+				},
+			});
+		</script>
+        <header>
+            <div class="caja">
+                <h1><img src="imagenes/logo.png" alt="logo"></h1>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="productos.html">Productos</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <main>
+            <ul class="productos">
+                <li>
+                    <h2>Cabello</h2>
+                    <img src="imagenes/cabello.jpg" alt="cabello">
+                    <p class="producto-descripcion">Con tijera, máquina o a gusto del cliente</p>
+                    <p class="producto-precio">$ 15.000.oo</p>                    
+                </li>
+                <li>
+                    <h2>Barba</h2>
+                    <img src="imagenes/barba.jpg" alt="barba">
+                    <p class="producto-descripcion">Corte y diseño profesional de barba</p>
+                    <p class="producto-precio">$ 25.000.oo</p>                    
+                </li>
+                <li>
+                    <h2>Cabello + Barba
+                    </h2>
+                    <img src="imagenes/cabello+barba.jpg" alt="ambos">
+                    <p class="producto-descripcion">Paquete completo de cabello y barba</p>
+                    <p class="producto-precio">$ 30.000.oo</p>
+                </li>
+            </ul>
+        </main>
+        <footer>
+        <img src="imagenes/logo-blanco.png" alt="footer">
+        <p class="copyright">&copy Copyright Alura 2020</p>  
+        </footer>
+    </body>
+</html>
